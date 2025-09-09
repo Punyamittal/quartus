@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Fake Taskbar Overlay",
+  "description": "A fake taskbar that can be toggled with Alt+H.",
+  "version": "1.0",
+  "permissions": ["tabs", "scripting"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "icons": {
+    "128": "icons/icon.png"
+  },
+  "action": {
+    "default_title": "Fake Taskbar"
+  },
+  "commands": {
+  "toggle_taskbar": {
+    "suggested_key": {
+      "default": "Alt+H"
+    },
+    "description": "Toggle the fake taskbar"
+    }  
+  }
+
+}
+
+
+  
+  
+  
+  
+  
+  
+  
+  
